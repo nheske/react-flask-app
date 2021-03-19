@@ -5,7 +5,7 @@ This project is based on [How To Create a React + Flask Project](https://blog.mi
     * npx create-react-app react-flask-app
     * React's app.js has fetch('/time') to call server    
 * Node.js provides webserver
-    * Node's package.json: "proxy": "http://localhost:5000"
+    * Node's (npm init) package.json: "proxy": "http://localhost:5000"
     * forwards to Flask
 * Flask python web server
     * .flaskenv configuration: FLASK_APP=api.py (redirects queries to api.py)
