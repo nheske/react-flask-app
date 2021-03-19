@@ -10,4 +10,7 @@ This project is based on [How To Create a React + Flask Project](https://blog.mi
 * Flask python web server
     * .flaskenv configuration: FLASK_APP=api.py (redirects queries to api.py)
     * flask route '/time' is mapped by annotation to get_current_time()
-
+* Yarn
+    * script shortcuts in package.json:
+        * "yarn start" (start node)
+        * "yarn start-api" (start flask)
