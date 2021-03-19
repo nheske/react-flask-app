@@ -2,8 +2,12 @@
 This project is based on [How To Create a React + Flask Project](https://blog.miguelgrinberg.com/post/how-to-create-a-react--flask-project)
 
 * React as Javascript front-end
-    * nodejs: create-react-app    
-* Node.js as webserver
-    *   package.json: "proxy": "http://localhost:5000"
-* Flask web server for python JSON server-side code
+    * npx create-react-app react-flask-app
+    * React's app.js has fetch('/time') to call server    
+* Node.js provides webserver
+    * Node's package.json: "proxy": "http://localhost:5000"
+    * forwards to Flask
+* Flask python web server
+    * .flaskenv configuration: FLASK_APP=api.py (redirects queries to api.py)
+    * flask route '/time' is mapped by annotation to get_current_time()
 
