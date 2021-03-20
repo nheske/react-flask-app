@@ -6,3 +6,6 @@ print("Hello World")
 print(say_hello())
 print(get_random())
 print(utils.get_matplotlib_version())
+utils.save_plot()
+
+
