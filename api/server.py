@@ -1,5 +1,6 @@
 import time
 from flask import Flask
+from api.mpl.plotit import say_hello
 
 app= Flask(__name__)
 
@@ -31,3 +32,4 @@ def get_black():
 
 
 print(get_current_time())
+print(say_hello())
