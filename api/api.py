@@ -3,6 +3,7 @@ from flask import Flask
 
 app= Flask(__name__)
 
+
 @app.route('/time')
 def get_current_time():
     # return {'time': "hello"}
@@ -13,7 +14,19 @@ def get_current_time():
 
 @app.route('/image')
 def get_image():
-    html = "<img src='/1951usaf_test_target.jpg' alt='logo' >"
+    html = "<img src='/1951usaf_test_target.jpg' alt='logo'>"
+    return html
+
+
+@app.route('/green')
+def get_green():
+    html = "<img src='/green.png' alt='logo' >"
+    return html
+
+
+@app.route('/black')
+def get_black():
+    html = "<img src='/black.png' alt='logo' >"
     return html
 
 

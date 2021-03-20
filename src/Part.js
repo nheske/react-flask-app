@@ -3,22 +3,22 @@ import ReactDOM from 'react-dom';
 
 class Car extends React.Component {
   render() {
-    return <h2>I am a Car!</h2>;
+    return " subpart";
   }
 }
 
-class Garage extends React.Component {
+class Part extends React.Component {
   render() {
     return (
       <div>
-      <h1>Who lives in my Garage?</h1>
+        part:
       <Car />
       </div>
     );
   }
 }
 
-ReactDOM.render(<Garage />, document.getElementById('root'));
+ReactDOM.render(<Part />, document.getElementById('root'));
 
 
-export default Garage;
+export default Part;

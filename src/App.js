@@ -1,26 +1,49 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Garage from './Garage.js';
+import Part from './Part.js';
+
+const imagesPath = {
+  minus: "black.png",
+  plus: "green.png"
+}
+
 
 class App extends React.Component {
   constructor() {
-    super();
-    this.state = {color: "red"};
-    fetch('/time').then(response => response.json()).then(data => console.log(data));
-    fetch('/image').then(response => response.text()).then(data => console.log(data));
+
+   super();
+//    const [imageHtml, setImageHtml] = useState(0);
+  this.state = {
+    open: true
   }
 
+    fetch('/time').then(response => response.json()).then(data => console.log(data));
+//    fetch('/green').then(response => response.text()).then(data => setImageHtml(data));
+  }
+
+    getImageName = () => this.state.open ? 'plus' : 'minus'
+
+    toggleImage = () => {
+    this.setState(state => ({ open: !state.open }))
+  }
+
+    changeColor = () => {
+      this.setState({color: "black"});
+    }
+
   render() {
+    const imageName = this.getImageName();
     return (
       <div>
-      <h1>What about that Garage?</h1>
-      <Garage />
+        <img style={{maxWidth: '50px'}} src={imagesPath[imageName]} onClick={this.toggleImage} />
+            <Part />
       </div>
     );
   }
+
 }
 
-ReactDOM.render(<Garage />, document.getElementById('root'));
+ReactDOM.render(<Part />, document.getElementById('root'));
 
 
 export default App;
