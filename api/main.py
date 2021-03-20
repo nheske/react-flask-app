@@ -6,6 +6,7 @@ print("Hello World")
 print(say_hello())
 print(get_random())
 print(utils.get_matplotlib_version())
-utils.save_plot()
+image_uri = utils.save_plot()
+print(utils.brownian_motion())
 
 

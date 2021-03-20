@@ -1,6 +1,6 @@
 import time
 from flask import Flask
-from api.utils.plotit import say_hello
+import api.utils.matplotlib_utils as utils
 
 app= Flask(__name__)
 
@@ -31,5 +31,13 @@ def get_black():
     return html
 
 
+@app.route('/img')
+def get_img():
+    image_uri = utils.brownian_motion()
+    return image_uri
+
+
 print(get_current_time())
-print(say_hello())
+
+
+
