@@ -10,4 +10,11 @@ def get_current_time():
     print("Number of ticks since 12:00am, January 1, 1970:", ticks)
     return {'time': time.time()}
 
+
+@app.route('/image')
+def get_image():
+    html = "<img src='/1951usaf_test_target.jpg' alt='logo' >"
+    return html
+
+
 print(get_current_time())
