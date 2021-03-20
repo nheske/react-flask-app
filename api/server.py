@@ -1,6 +1,6 @@
 import time
 from flask import Flask
-from api.mpl.plotit import say_hello
+from api.utils.plotit import say_hello
 
 app= Flask(__name__)
 
