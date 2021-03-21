@@ -1,4 +1,5 @@
 import time
+import flask
 from flask import Flask
 import api.utils.utility as utils
 from flask import jsonify
@@ -28,6 +29,11 @@ def create_figure():
     ys = [random.randint(1, 50) for x in xs]
     axis.plot(xs, ys)
     return fig
+
+
+@app.route('/')
+def my_index():
+    flask.render_template("index.html",token="hello flask-react")
 
 
 @app.route('/time')
