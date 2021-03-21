@@ -38,51 +38,13 @@ def get_current_time():
     return {'time': time.time()}
 
 
-@app.route('/image')
-def get_image():
-    html = "<img src='/1951usaf_test_target.jpg' alt='logo'>"
-    return html
-
-
-@app.route('/green')
-def get_green():
-    html = "<img src='/green.png' alt='logo' >"
-    return html
-
-
-@app.route('/black')
-def get_black():
-    html = "<img src='/black.png' alt='logo' >"
-    return html
-
-
-@app.route('/img')
-def get_img():
-    image_uri = utils.brownian_motion()
-    uri = [{"url": image_uri}]
-    uri = [{"breeds":[],"id":"ry0d8xXz0","url":image_uri,"width":796,"height":652}]
-    uri = [{"breeds":[],"id":"ry0d8xXz0","url":"https://cdn2.thecatapi.com/images/ry0d8xXz0.jpg","width":796,"height":652}]
-    json = jsonify(uri)
-    print(json)
-    return json
-
-
-@app.route('/cat2')
-def get_cat2():
+@app.route('/img_json')
+def get_img_json():
     uri = utils.get_random_image()
     uri_list = [{"breeds":[],"id":"ry0d8xXz0","url":uri,"width":796,"height":652}]
     json = jsonify(uri_list)
     print(json)
     return json
-
-
-@app.route('/cat')
-def get_cat():
-    uri = [{"breeds":[],"id":"ry0d8xXz0","url":"https://cdn2.thecatapi.com/images/ry0d8xXz0.jpg","width":796,"height":652}]
-    json = jsonify(uri)
-    print(json)
-    return json
-
 
 
 print(get_current_time())
