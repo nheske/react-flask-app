@@ -6,9 +6,20 @@ import time
 import os
 import os.path
 from numpy.random import random as rng
+from PIL import Image
+
 
 def get_matplotlib_version():
     return matplotlib.__version__
+
+
+def get_random_image():
+    imarray = random.rand(100,100,3) * 255
+    im = Image.fromarray(imarray.astype('uint8')).convert('RGBA')
+    filename = str(time.time())+'.png'
+    rel_path = "../public/generated/" + filename
+    im.save(rel_path)
+    return "generated/" + filename
 
 
 def brownian_motion():
