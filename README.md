@@ -1,8 +1,6 @@
 
 This project is based on [How To Create a React + Flask Project](https://blog.miguelgrinberg.com/post/how-to-create-a-react--flask-project)
 
-todo https://www.youtube.com/watch?v=II15JIE-HyE
-
 * React as Javascript front-end
     * npx create-react-app react-flask-app
     * React's app.js has fetch('/time') to call server    
