@@ -4,12 +4,13 @@
 /node_modules
 /.pnp
 .pnp.js
-
-# virtual env, IDE, generated files
 /api/venv
+
+# IDE, generated files
 /.idea
 .idea/
 /public/generated
+/uploads
 
 # testing
 /coverage
