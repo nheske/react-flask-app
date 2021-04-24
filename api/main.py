@@ -5,14 +5,32 @@ import api.utils.utility as utils
 from flask import jsonify
 from werkzeug.utils import secure_filename
 
-app = Flask(__name__)
-
-
 import io
 import random
 from flask import Response
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def my_index():
+    flask.render_template("index.html", token="hello flask-react")
+
+
+@app.route('/api/time')
+def get_current_time():
+    # return {'time': "hello"}
+    ticks = time.time()
+    print("Number of ticks since 12:00am, January 1, 1970:", ticks)
+    return {'time': time.time()}
+
+
+#replicatea https://jsonplaceholder.typicode.com/todos/1
+@app.route('/api/todos')
+def get_todos():
+    return {"userId": 1, "id": 1, "title": "delectus aut autem","completed": False}
 
 
 @app.route('/plot')
@@ -30,11 +48,6 @@ def create_figure():
     ys = [random.randint(1, 50) for x in xs]
     axis.plot(xs, ys)
     return fig
-
-
-@app.route('/')
-def my_index():
-    flask.render_template("index.html", token="hello flask-react")
 
 
 @app.route('/uploader')
@@ -56,12 +69,6 @@ def upload_file():
         return 'file uploaded successfully'
 
 
-@app.route('/api/time')
-def get_current_time():
-    # return {'time': "hello"}
-    ticks = time.time()
-    print("Number of ticks since 12:00am, January 1, 1970:", ticks)
-    return {'time': time.time()}
 
 
 @app.route('/api/img_json')
