@@ -24,5 +24,5 @@ React's app.js has fetch('/time') to call server
 * Yarn
     * dependency manager (like maven)
     * script shortcuts in package.json:
-        * "yarn start" (start node)
-        * "yarn start-api" (start flask)
+        * "yarn start" (start node) (http://localhost:3000/ would invoke index.html from node express)
+        * "yarn start-api" (start flask) (http://127.0.0.1:5000/api/time is an example of going straight to the API)
