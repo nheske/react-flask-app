@@ -42,6 +42,9 @@ yarn build
 Add this package:
 npm i -S http-proxy-middleware
 Then create a setupProxy.js in src:
+  
+s
+
 
 
 
