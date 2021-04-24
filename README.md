@@ -38,7 +38,10 @@ yarn build
   When deploying this application on a production server this build directory must be the web root, and the index.html file the main file from where the entire application is downloaded.
 * pip install gunicorn (production webserver)
 * pip freeze > requirements.txt
-
+* Remove the proxy ("proxy": "http://localhost:5000") from the package.json. Then...
+Add this package:
+npm i -S http-proxy-middleware
+Then create a setupProxy.js in src:
 
 
 
