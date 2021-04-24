@@ -28,4 +28,26 @@ React's app.js has fetch('api/time') for requesting current time or 'api/todos f
         * "yarn start-api" (start flask) (http://127.0.0.1:5000/api/time is an example of going straight to the API)
 
 
-#Part 2 Deploy to Heroku: [How to Deploy a React + Flask Project](https://blog.miguelgrinberg.com/post/how-to-deploy-a-react--flask-project) 
+#Part 2 Deploy to Heroku: [How to Deploy a React + Flask Project](https://blog.miguelgrinberg.com/pos
+
+Build:
+* Bundle all the source files and optimize their size so that they are served to clients as efficiently as possible.
+```
+yarn build
+```
+  When deploying this application on a production server this build directory must be the web root, and the index.html file the main file from where the entire application is downloaded.
+* pip install gunicorn (production webserver)
+* pip freeze > requirements.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
