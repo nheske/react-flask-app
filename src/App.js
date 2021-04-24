@@ -12,14 +12,16 @@ class App extends React.Component{
 
 
     fetch_data = () => {
-        fetch('api/img_json').then(res=>{
+        fetch('api/time').then(res=>{
             if(res.ok){
                 return res.json();
             }
             throw new Error('request failed');
         },networkError=> console.log(networkError.message)
         ).then(jsonRes=>{
-            this.setState({url: jsonRes[0].url});
+            console.log(jsonRes)
+//            this.setState({url: jsonRes[0].url});
+            this.setState({url: jsonRes[0]})
         })
     }
 
