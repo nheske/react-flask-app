@@ -56,7 +56,7 @@ def upload_file():
         return 'file uploaded successfully'
 
 
-@app.route('/time')
+@app.route('/api/time')
 def get_current_time():
     # return {'time': "hello"}
     ticks = time.time()
@@ -64,7 +64,7 @@ def get_current_time():
     return {'time': time.time()}
 
 
-@app.route('/img_json')
+@app.route('/api/img_json')
 def get_img_json():
     uri = utils.get_random_image()
     uri_list = [{"breeds":[],"id":"ry0d8xXz0","url":uri,"width":796,"height":652}]

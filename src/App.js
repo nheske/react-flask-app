@@ -12,7 +12,7 @@ class App extends React.Component{
 
 
     fetch_data = () => {
-        fetch('/img_json').then(res=>{
+        fetch('api/img_json').then(res=>{
             if(res.ok){
                 return res.json();
             }
